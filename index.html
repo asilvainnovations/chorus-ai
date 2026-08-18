@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Open Fang — Strategic Intelligence & Transformation Maps</title>
+<meta name="description" content="Continuously improve Strategic Intelligence using Transformation Maps. Powered by advanced systems mapping, causal loop diagrams, and autonomous AI agents.">
+<meta name="theme-color" content="#0A1628">
+<meta http-equiv="refresh" content="8;url=https://openfang.asilvainnovations.com/strategic-intelligence">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS — Apple Liquid Glass & Deep Blue Palette
+   ============================================================ */
+:root {
+  --bg-primary: #0A1628;
+  --bg-secondary: #0F1D32;
+  --accent: #3B82F6;
+  --accent-soft: rgba(59, 130, 246, 0.15);
+  --accent-glow: rgba(59, 130, 246, 0.4);
+  --gold: #F59E0B;
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-tertiary: rgba(148, 163, 184, 0.6);
+  
+  /* Apple Liquid Glass Effects */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.12);
+  --glass-strong: rgba(15, 29, 50, 0.7);
+  
+  --radius: 16px;
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  
+  --shadow-1: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
+  --ease: cubic-bezier(0.22, 0.8, 0.28, 1);
+  
+  --body-bg: radial-gradient(1200px 600px at 85% -5%, rgba(59, 130, 246, 0.15), transparent 60%), 
+             radial-gradient(900px 500px at -10% 30%, rgba(59, 130, 246, 0.08), transparent 55%), 
+             linear-gradient(160deg, #0A1628 0%, #07101F 48%, #050A14 100%);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body); font-weight: 400; line-height: 1.65; font-size: 1rem;
+  color: var(--text-primary); background: var(--body-bg); background-attachment: fixed;
+  min-height: 100vh; overflow-x: hidden;
+}
+
+.wrap { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+.section { padding: clamp(3.5rem, 8vw, 6rem) 0; position: relative; }
+
+/* Typography */
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spacing: -0.01em; }
+.grad-text {
+  background: linear-gradient(92deg, #60A5FA 0%, var(--accent) 45%, var(--gold) 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.kicker {
+  font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 0.9rem;
+  display: flex; align-items: center; gap: 0.7rem; justify-content: center;
+}
+.kicker::before, .kicker::after { content: ''; height: 1px; width: 34px; background: linear-gradient(90deg, transparent, var(--accent)); }
+.kicker::after { transform: scaleX(-1); }
+
+.section-title { font-size: clamp(1.7rem, 4.6vw, 2.6rem); font-weight: 800; text-align: center; margin-bottom: 0.9rem; }
+.section-sub { text-align: center; color: var(--text-secondary); max-width: 680px; margin: 0 auto clamp(2rem, 5vw, 3.2rem); font-weight: 300; font-size: clamp(0.95rem, 2.4vw, 1.05rem); }
+
+/* Glass Components */
+.glass { 
+  background: var(--glass-bg); border: 1px solid var(--glass-border); 
+  backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); 
+  box-shadow: var(--shadow-1); border-radius: var(--radius);
+}
+.glass-strong { 
+  background: var(--glass-strong); border: 1px solid var(--glass-highlight); 
+  backdrop-filter: blur(24px) saturate(200%); -webkit-backdrop-filter: blur(24px) saturate(200%); 
+  box-shadow: var(--shadow-1), var(--shadow-glow); border-radius: var(--radius);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.92rem; letter-spacing: 0.03em;
+  padding: 0.85rem 1.7rem; border-radius: 999px; border: 1px solid transparent; cursor: pointer;
+  text-decoration: none; transition: transform 0.25s var(--ease), box-shadow 0.25s, background 0.25s;
+  position: relative; overflow: hidden; min-height: 48px;
+}
+.btn-primary { 
+  background: linear-gradient(135deg, var(--accent), #2563EB); color: #fff; 
+  box-shadow: 0 8px 24px var(--accent-glow); 
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 34px var(--accent-glow); }
+.btn-ghost { 
+  background: rgba(255,255,255,0.05); color: var(--text-primary); border-color: var(--glass-border); 
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+
+/* Header */
+.site-header { 
+  position: sticky; top: 0; z-index: 1000; background: rgba(10, 22, 40, 0.8); 
+  backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid var(--glass-border); 
+}
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.8rem clamp(1rem, 4vw, 2.5rem); max-width: 1400px; margin: 0 auto; }
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.brand-mark { 
+  width: 40px; height: 40px; border-radius: 12px; flex: none; 
+  background: linear-gradient(135deg, var(--accent), #60A5FA); 
+  display: flex; align-items: center; justify-content: center; 
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+.brand-mark svg { width: 22px; height: 22px; color: #fff; }
+.brand-name { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text-primary); }
+.brand-sub { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-secondary); }
+
+/* Hero */
+.hero { position: relative; padding: clamp(4rem, 10vw, 7rem) 0 clamp(3.5rem, 8vw, 6rem); overflow: hidden; }
+.hero-grid { display: grid; gap: 2.4rem; grid-template-columns: 1fr; position: relative; z-index: 1; }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: 1.2fr 1fr; align-items: center; } }
+.eyebrow { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
+.hero h1 { font-size: clamp(2.2rem, 6.4vw, 3.8rem); font-weight: 900; margin-bottom: 1.1rem; }
+.hero-sub { font-size: clamp(1rem, 2.4vw, 1.14rem); font-weight: 300; color: var(--text-secondary); line-height: 1.8; max-width: 600px; margin-bottom: 1.9rem; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.6rem; }
+
+/* Redirect Banner */
+.redirect-banner {
+  position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  background: rgba(10, 22, 40, 0.9); border: 1px solid var(--accent);
+  backdrop-filter: blur(16px); padding: 0.8rem 1.5rem; border-radius: 999px;
+  display: flex; align-items: center; gap: 0.8rem; z-index: 9999;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 20px var(--accent-glow);
+  font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-primary);
+  animation: slideUp 0.6s var(--ease) forwards;
+}
+.redirect-spinner {
+  width: 16px; height: 16px; border: 2px solid var(--glass-border);
+  border-top-color: var(--accent); border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes slideUp { from { opacity: 0; transform: translate(-50%, 20px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+/* Features */
+.feat-grid { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .feat-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1080px) { .feat-grid { grid-template-columns: repeat(3, 1fr); } }
+.feat-card { padding: 1.5rem; position: relative; overflow: hidden; transition: transform 0.3s var(--ease), box-shadow 0.3s, border-color 0.3s; }
+.feat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-glow); border-color: var(--accent); }
+.feat-icon { 
+  width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; 
+  margin-bottom: 1rem; background: var(--accent-soft); border: 1px solid var(--accent); 
+}
+.feat-icon svg { width: 21px; height: 21px; color: var(--accent); }
+.feat-card h3 { font-size: 1.04rem; font-weight: 700; margin-bottom: 0.5rem; }
+.feat-card p { font-size: 0.88rem; font-weight: 300; color: var(--text-secondary); line-height: 1.7; }
+
+/* Footer */
+.site-footer { background: rgba(5, 10, 20, 0.9); border-top: 1px solid var(--glass-border); padding: 3rem 0 1.6rem; margin-top: 2rem; }
+.footer-base { border-top: 1px solid var(--glass-border); padding-top: 1.3rem; display: flex; flex-direction: column; gap: 0.6rem; align-items: center; text-align: center; }
+.footer-base p { font-size: 0.8rem; color: var(--text-tertiary); font-weight: 300; }
+
+/* Reveal Animation */
+html.js .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+html.js .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- SVG Definitions -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#top" class="brand" aria-label="Open Fang home">
+      <span class="brand-mark"><svg><use href="#i-brain"/></svg></span>
+      <span><span class="brand-name">Open Fang</span><br><span class="brand-sub">Strategic Intelligence</span></span>
+    </a>
+    <div class="nav-cta" style="display:flex; align-items:center; gap:0.7rem;">
+      <a href="https://openfang.asilvainnovations.com/strategic-intelligence" class="btn btn-primary" style="padding:0.65rem 1.3rem; min-height:40px; font-size:0.85rem;">
+        <span>Launch Strat Planner</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Systems Strat Planner · Transformation Maps</p>
+          <h1>Continuously improve <span class="grad-text">Strategic Intelligence.</span></h1>
+          <p class="hero-sub">Open Fang unifies SWOT-to-Systems Mapping, Causal Loop Diagrams, and AI-driven strategy generation into a single, autonomous operating system. Transform complexity into clarity.</p>
+          <div class="cta-row">
+            <a href="https://openfang.asilvainnovations.com/strategic-intelligence" class="btn btn-primary">
+              <span>Enter Open Fang</span><svg style="width:17px;height:17px"><use href="#i-arrow"/></svg>
+            </a>
+            <a href="#features" class="btn btn-ghost"><span>Explore Capabilities</span></a>
+          </div>
+          <p style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-tertiary); margin-top:1rem;">
+            ↻ Redirecting to Strategic Intelligence Portal in <span id="countdown">5</span>s...
+          </p>
+        </div>
+        <aside class="glass-strong reveal" style="padding:1.7rem; border-radius:20px;">
+          <div style="font-family:var(--font-mono); font-size:0.72rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-secondary); margin-bottom:1.2rem;">Core Transformation Engines</div>
+          <div style="display:flex; flex-direction:column; gap:0.8rem;">
+            <div class="glass" style="padding:1rem; display:flex; align-items:center; gap:0.8rem;">
+              <div style="width:36px;height:36px;border-radius:8px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg style="width:18px;height:18px;color:var(--accent)"><use href="#i-map"/></svg></div>
+              <div><div style="font-weight:600;font-size:0.9rem;">SWOT-to-Systems Mapping</div><div style="font-size:0.75rem;color:var(--text-secondary);">Convert static analysis into dynamic causal models.</div></div>
+            </div>
+            <div class="glass" style="padding:1rem; display:flex; align-items:center; gap:0.8rem;">
+              <div style="width:36px;height:36px;border-radius:8px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg style="width:18px;height:18px;color:var(--accent)"><use href="#i-loop"/></svg></div>
+              <div><div style="font-weight:600;font-size:0.9rem;">Causal Loop Diagrams</div><div style="font-size:0.75rem;color:var(--text-secondary);">Identify reinforcing and balancing feedback archetypes.</div></div>
+            </div>
+            <div class="glass" style="padding:1rem; display:flex; align-items:center; gap:0.8rem;">
+              <div style="width:36px;height:36px;border-radius:8px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg style="width:18px;height:18px;color:var(--accent)"><use href="#i-brain"/></svg></div>
+              <div><div style="font-weight:600;font-size:0.9rem;">AI Strategy Generation</div><div style="font-size:0.75rem;color:var(--text-secondary);">Autonomous agents simulating outcomes and stress-testing plans.</div></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <p class="kicker">Capabilities</p>
+      <h2 class="section-title">Built for leaders who demand <span class="grad-text">precision and results</span></h2>
+      <p class="section-sub">Strat Planner Pro infrastructure meets OpenFang's autonomous agent ecosystem. No silos, no static reports—only living, evolving strategic intelligence.</p>
+      <div class="feat-grid">
+        <article class="feat-card glass reveal">
+          <div class="feat-icon"><svg><use href="#i-map"/></svg></div>
+          <h3>Transformation Maps</h3>
+          <p>Visualize the pathway from current state to desired future state, mapping dependencies, bottlenecks, and leverage points in real time.</p>
+        </article>
+        <article class="feat-card glass reveal">
+          <div class="feat-icon"><svg><use href="#i-loop"/></svg></div>
+          <h3>System Archetypes</h3>
+          <p>Automatically detect common system traps (e.g., "Fixes that Fail", "Shifting the Burden") and generate counter-strategies.</p>
+        </article>
+        <article class="feat-card glass reveal">
+          <div class="feat-icon"><svg><use href="#i-brain"/></svg></div>
+          <h3>Autonomous "Hands"</h3>
+          <p>Deploy pre-built OpenFang agents (Researcher, Predictor, Collector) to continuously monitor OSINT, market shifts, and internal metrics.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-base">
+      <p>© 2026 Open Fang / Asilva Innovations. All rights reserved.</p>
+      <p style="font-size:0.7rem; opacity:0.7;">Continuously improving Strategic Intelligence using Transformation Maps.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Elegant Redirect Banner -->
+<div class="redirect-banner" id="redirectBanner">
+  <div class="redirect-spinner"></div>
+  <span>Redirecting to Open Fang Strategic Intelligence...</span>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* Scroll reveal */
+const revealIO = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting) { en.target.classList.add('in'); revealIO.unobserve(en.target); }
+}), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+/* Countdown and Redirect Logic */
+let timeLeft = 5;
+const countdownEl = document.getElementById('countdown');
+const targetUrl = "https://openfang.asilvainnovations.com/strategic-intelligence"; 
+// Fallback to repo if subdomain isn't configured yet: "https://github.com/asilvainnovations/chorus-ai"
+
+const timer = setInterval(() => {
+  timeLeft--;
+  if (countdownEl) countdownEl.textContent = timeLeft;
+  if (timeLeft <= 0) {
+    clearInterval(timer);
+    window.location.href = targetUrl;
+  }
+}, 1000);
+
+// Optional: Allow user to cancel redirect if they want to read the page
+document.getElementById('redirectBanner').addEventListener('click', () => {
+  clearInterval(timer);
+  document.getElementById('redirectBanner').style.display = 'none';
+  if (countdownEl) countdownEl.parentElement.innerHTML = '<span>Redirect paused. <a href="' + targetUrl + '" style="color:var(--accent);text-decoration:underline;">Click here to proceed manually.</a></span>';
+});
+</script>
+</body>
+</html>
