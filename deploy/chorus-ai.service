@@ -1,6 +1,6 @@
 [Unit]
 Description=OpenFang Agent OS Daemon
-Documentation=https://github.com/openfang-ai/openfang
+Documentation=https://github.com/chorus-ai/chorus-ai
 After=network-online.target
 Wants=network-online.target
 
@@ -15,13 +15,13 @@ TimeoutStopSec=30
 
 # Environment
 EnvironmentFile=-/etc/openfang/env
-WorkingDirectory=/var/lib/openfang
+WorkingDirectory=/var/lib/chorus-ai
 
 # Security hardening
 NoNewPrivileges=true
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/var/lib/openfang
+ReadWritePaths=/var/lib/chorus-ai
 PrivateTmp=true
 ProtectKernelTunables=true
 ProtectKernelModules=true
