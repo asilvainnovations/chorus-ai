@@ -29,7 +29,7 @@ Thank you for your interest in contributing to OpenFang. This guide covers every
 
 ```bash
 git clone https://github.com/RightNow-AI/openfang.git
-cd openfang
+cd chorus-ai
 cargo build
 ```
 
