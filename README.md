@@ -2,7 +2,7 @@
   <img src="public/assets/openfang-logo.png" width="160" alt="OpenFang Logo" />
 </p>
 
-<h1 align="center">OpenFang</h1>
+<h1 align="center">Chorus AI</h1>
 <h3 align="center">The Agent Operating System</h3>
 
 <p align="center">
