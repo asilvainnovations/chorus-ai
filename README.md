@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <a href="https://openfang.sh/docs">Documentation</a> &bull;
-  <a href="https://openfang.sh/docs/getting-started">Quick Start</a> &bull;
-  <a href="https://x.com/openfangg">Twitter / X</a>
+  <a href="https://chorus-ai.sh/docs">Documentation</a> &bull;
+  <a href="https://chorus-ai.sh/docs/getting-started">Quick Start</a> &bull;
+  <a href="https://x.com/chorus-ai">Twitter / X</a>
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@
 
 ---
 
-## What is OpenFang?
+## What is Chorus AI?
 
 OpenFang is an **open-source Agent Operating System** — not a chatbot framework, not a Python wrapper around an LLM, not a "multi-agent orchestrator." It is a full operating system for autonomous agents, built from scratch in Rust.
 
@@ -42,7 +42,7 @@ Traditional agent frameworks wait for you to type something. OpenFang runs **aut
 The entire system compiles to a **single ~32MB binary**. One install, one command, your agents are live.
 
 ```bash
-curl -fsSL https://openfang.sh/install | sh
+curl -fsSL https://chorus-ai.sh/install | sh
 openfang init
 openfang start
 # Dashboard live at http://localhost:4200
@@ -108,7 +108,7 @@ openfang hand list
 
 ---
 
-## OpenFang vs The Landscape
+## Chorus AI vs The Landscape
 
 <p align="center">
   <img src="public/assets/openfang-vs-claws.png" width="600" alt="OpenFang vs OpenClaw vs ZeroClaw" />
@@ -122,7 +122,7 @@ All data from official documentation and public repositories — February 2026.
 
 ```
 ZeroClaw   ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   10 ms
-OpenFang   ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  180 ms    ★
+Chorus   ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  180 ms    ★
 LangGraph  █████████████████░░░░░░░░░░░░░░░░░░░░░░░░░  2.5 sec
 CrewAI     ████████████████████░░░░░░░░░░░░░░░░░░░░░░  3.0 sec
 AutoGen    ██████████████████████████░░░░░░░░░░░░░░░░░  4.0 sec
@@ -133,7 +133,7 @@ OpenClaw   ███████████████████████
 
 ```
 ZeroClaw   █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    5 MB
-OpenFang   ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   40 MB    ★
+Chorus-AI   ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   40 MB    ★
 LangGraph  ██████████████████░░░░░░░░░░░░░░░░░░░░░░░░░  180 MB
 CrewAI     ████████████████████░░░░░░░░░░░░░░░░░░░░░░░  200 MB
 AutoGen    █████████████████████████░░░░░░░░░░░░░░░░░░  250 MB
@@ -144,7 +144,7 @@ OpenClaw   ███████████████████████
 
 ```
 ZeroClaw   █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  8.8 MB
-OpenFang   ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   32 MB    ★
+Chorus-AI   ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   32 MB    ★
 CrewAI     ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  100 MB
 LangGraph  ████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  150 MB
 AutoGen    ████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░  200 MB
@@ -154,7 +154,7 @@ OpenClaw   ███████████████████████
 #### Security Systems (higher is better)
 
 ```
-OpenFang   ████████████████████████████████████████████   16      ★
+Chorus_AI   ████████████████████████████████████████████   16      ★
 ZeroClaw   ███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░    6
 OpenClaw   ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    3
 AutoGen    █████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    2
@@ -165,7 +165,7 @@ CrewAI     ███░░░░░░░░░░░░░░░░░░░░
 #### Channel Adapters (higher is better)
 
 ```
-OpenFang   ████████████████████████████████████████████   40      ★
+Chorus AI   ████████████████████████████████████████████   40      ★
 ZeroClaw   ███████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░   15
 OpenClaw   █████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   13
 CrewAI     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    0
@@ -177,7 +177,7 @@ LangGraph  ░░░░░░░░░░░░░░░░░░░░░░░
 
 ```
 ZeroClaw   ████████████████████████████████████████████   28
-OpenFang   ██████████████████████████████████████████░░   27      ★
+Chorus AI    ██████████████████████████████████████████░░   27      ★
 LangGraph  ██████████████████████░░░░░░░░░░░░░░░░░░░░░   15
 CrewAI     ██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   10
 OpenClaw   ██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   10
@@ -323,15 +323,15 @@ curl -fsSL https://openfang.sh/install | sh
 openfang init
 
 # 3. Start the daemon
-openfang start
+chorus-ai start
 
 # 4. Dashboard is live at http://localhost:4200
 
 # 5. Activate a Hand — it starts working for you
-openfang hand activate researcher
+chorus-ai hand activate researcher
 
 # 6. Chat with an agent
-openfang chat researcher
+chorus-ai chat researcher
 > "What are the emerging trends in AI agent frameworks?"
 
 # 7. Spawn a pre-built agent
@@ -343,8 +343,8 @@ openfang agent spawn coder
 
 ```powershell
 irm https://openfang.sh/install.ps1 | iex
-openfang init
-openfang start
+chorus-ai init
+chorus-ai start
 ```
 
 </details>
@@ -371,7 +371,7 @@ cargo fmt --all -- --check
 
 ## Stability Notice
 
-OpenFang v0.1.0 is the first public release. The architecture is solid, the test suite is comprehensive, and the security model is comprehensive. That said:
+chorus-ai v0.1.0 is the first public release. The architecture is solid, the test suite is comprehensive, and the security model is comprehensive. That said:
 
 - **Breaking changes** may occur between minor versions until v1.0
 - **Some Hands** are more mature than others (Browser and Researcher are the most battle-tested)
@@ -390,8 +390,8 @@ MIT — use it however you want.
 
 ## Links
 
-- [Website & Documentation](https://openfang.sh)
-- [Quick Start Guide](https://openfang.sh/docs/getting-started)
+- [Website & Documentation](https://chorus-ai.sh)
+- [Quick Start Guide](https://chorus-ai.sh/docs/getting-started)
 - [GitHub](https://github.com/RightNow-AI/openfang)
 - [Discord](https://discord.gg/sSJqgNnq6X)
 - [Twitter / X](https://x.com/openfangg)
@@ -411,9 +411,9 @@ MIT — use it however you want.
 </p>
 
 <p align="center">
-  <a href="https://www.rightnowai.co/">Website</a> &bull;
+  <a href="https://www.chorus-ai.co/">Website</a> &bull;
   <a href="https://x.com/Akashi203">Twitter / X</a> &bull;
-  <a href="https://www.buymeacoffee.com/openfang" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+  <a href="https://www.buymeacoffee.com/chorus-ai" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 </p>
 
 ---
